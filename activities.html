@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4e8d1; /* Sand background color */
+    padding: 20px;
+    line-height: 1.6;
+    color: #333; /* Darker text color for contrast */
+}
+
+header {
+    background-color: #d4b89e; /* Light sand color for the header */
+    color: #333;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #333; /* Dark text color for navigation links */
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Arrange sections horizontally */
+    gap: 30px; /* White background for the container */
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    background-color: #fff; /* White background for sections */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 0 0 30%; /* Adjust to show three sections and part of the next */
+    min-height: 200px; /* Adjust as needed */
+    margin-right: 20px; /* Space between sections */
+    flex-shrink: 0; /* Prevent shrinking of sections */
+}
+
+.section:last-child {
+    margin-right: 0; /* Remove margin for the last section */
+}
+
+.section-heading {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333; /* Dark text color for section headings */
+}
+
+ul {
+    margin-left: 20px;
+    color: #666; /* Medium gray text color for list items */
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="activities.html">Activities</a>
+            <a href="personal-info.html">Personal Info</a>
+        </nav>
+    </header>
+    <div class="container about-container">
+        <div class="section">
+            <h2 class="section-heading">Projects</h2>
+            <ul>
+                <li>School Dropout Analysis</li>
+                <li>Crop Prediction</li>
+                <li>Sign Language Detection</li>
+                <li>Name Entity Recognition</li>
+                <li>Flower Classification</li>
+                <li>Emotion Detection (happy or sad using image)</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="section-heading">Certifications</h2>
+            <ul>
+                <li>NPTEL: Problem Solving through C Programming</li>
+                <li>NPTEL: Data Analytics with Python</li>
+                <li>NPTEL: Artificial Intelligence - Search Methods for Problem Solving</li>
+                <li>HackerRank: Python (Basic)</li>
+                <li>Coursera Project Network: Python for Data Analysis - Pandas & Numpy</li>
+                <li>Coursera Project Network: Python Classes and Inheritance</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="section-heading">Skills</h2>
+            <ul>
+                <li>C</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>Machine Learning</li>
+                <li>Artificial Intelligence</li>
+                <li>Data Structure</li>
+                <li>Data Science</li>
+                <li>Deep Learning</li>
+                <li>Natural Language Processing</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="section-heading">Workshops</h2>
+            <ul>
+                <li>Big Data Analytic</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="section-heading">Internship</h2>
+            <ul>
+                <li>Yaane Technology - 2 weeks</li>
+                <li>CODTECH SOLUTION- 4 weeks</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

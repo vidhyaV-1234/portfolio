@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4e8d1; /* Sand background color */
+            padding: 20px;
+            line-height: 1.6;
+            color: #333; /* Darker text color for contrast */
+        }
+
+        header {
+            background-color: #d4b89e; /* Light sand color for the header */
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 40px; /* Increased space below the header */
+        }
+
+        nav a {
+            color: #333; /* Dark text color for navigation links */
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            gap: 30px;
+            background-color: #ffffff; /* White background for the container */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 1200px;
+            margin: 40px auto 0; /* Increased space above the container */
+        }
+
+        .left-column {
+            flex: 1;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Circular profile image */
+            margin-bottom: 20px;
+            border: 2px solid #333; /* Dark border around the profile image */
+        }
+
+        .name-role {
+            color: #333; /* Dark text color for name and role */
+        }
+
+        .name-role h1 {
+            margin-bottom: 10px;
+            font-size: 2rem; /* Larger font size for name */
+        }
+
+        .name-role h2 {
+            margin-bottom: 10px;
+            font-size: 1.2rem; /* Slightly larger font size for role */
+            color: #666; /* Medium gray for role */
+        }
+
+        .domain {
+            font-size: 1rem;
+            color: #888; /* Light gray for domain */
+        }
+
+        .about-me {
+            flex: 2;
+        }
+
+        .about-me h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333; /* Dark text color for section headings */
+        }
+
+        .about-me p {
+            margin-bottom: 20px;
+            color: #666; /* Medium gray text color for paragraphs */
+        }
+
+        /* Animated Line Styling */
+/* Animated Line Styling */
+.line {
+    margin: 20px 0;
+    height: 2px; /* Thickness of the line */
+    background-color: #d4b89e; /* Base color for the line */
+    position: relative; /* Relative positioning for the animated line */
+    overflow: hidden; /* Hide overflow of the animated line */
+}
+
+.line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start the animation from outside the container */
+    width: 100%;
+    height: 100%;
+    background-color: #ff5733; /* Color of the moving line */
+    animation: moveLine 2s linear infinite; /* Animation duration and repeat */
+}
+
+@keyframes moveLine {
+    0% {
+        left: -100%; /* Start from the left edge */
+    }
+    100% {
+        left: 100%; /* End at the right edge */
+    }
+}
+
+
+        /* Flip animation */
+        .flip-container {
+            perspective: 1000px;
+        }
+
+        .flip-card {
+            position: relative;
+            width: 200px; /* Adjust as needed */
+            height: 100px; /* Adjust as needed */
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            margin: 0 auto;
+        }
+
+        .flip-card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flip-card-back {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotateY(180deg);
+        }
+
+        /* CSS for automatic flip */
+        .flip-card.auto-flip {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="activities.html">Activities</a>
+            <a href="personal-info.html">Personal Info</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="left-column">
+            <img src="v.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Vidhya V</h1>
+            <div class="line"></div>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <div class="name-role">
+                            <h2>Student</h2>
+                        </div>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="name-role">
+                            <div class="domain">Domain of interest: AI</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-me">
+            <div class="line"></div>
+            <h2>About Me</h2>
+            <p>
+                Currently pursuing a B.Tech in Artificial Intelligence and Data Science. Passionate about machine learning with intermediate knowledge. Eager to apply theoretical understanding to practical projects. Proficient in Python, TensorFlow, and scikit-learn. Self-driven learner committed to expanding skill set. Seeking opportunities to contribute and grow in the field of AI and ML.
+            </p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var flipCard = document.querySelector('.flip-card');
+            setInterval(function() {
+                flipCard.classList.toggle('auto-flip');
+            }, 5000); // 5000 milliseconds = 5 seconds
+        });
+    </script>
+</body>
+</html>
